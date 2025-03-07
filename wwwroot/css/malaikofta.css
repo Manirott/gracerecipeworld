@@ -1,0 +1,100 @@
+﻿/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff7f1;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.recipe-container {
+    max-width: 800px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Title */
+h1 {
+    font-size: 32px;
+    color: #ff5733;
+}
+
+/* Recipe Description */
+.recipe-description {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Ingredients */
+.ingredients h2 {
+    font-size: 24px;
+    color: #ff5733;
+    margin-top: 30px;
+}
+
+.ingredient-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.ingredient-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ingredient-item li {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Cooking Instructions */
+.cooking-instructions h2 {
+    font-size: 24px;
+    color: #ff5733;
+    margin-top: 30px;
+}
+
+.cooking-instructions ol {
+    text-align: left;
+    font-size: 16px;
+    color: #555;
+}
+
+.cooking-instructions li {
+    margin-bottom: 10px;
+}
+
+/* Tips & Variations */
+.tips h2 {
+    font-size: 24px;
+    color: #ff5733;
+    margin-top: 30px;
+}
+
+.tips ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Serving Suggestions */
+.serve h2 {
+    font-size: 24px;
+    color: #ff5733;
+    margin-top: 30px;
+}
+
+.serve p {
+    font-size: 16px;
+    color: #555;
+}

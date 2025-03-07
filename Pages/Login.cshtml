@@ -1,0 +1,20 @@
+﻿@page
+@model reciepe.Pages.LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+<h1>Login</h1>
+<link href="~/css/login.css" rel="stylesheet" />
+<form method="post">
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="Username" required />
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="Password" required />
+    </div>
+    <div>
+        <button type="submit">Login</button>
+    </div>
+</form>

@@ -1,0 +1,36 @@
+﻿.recipe-container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.ingredients-list, .instructions-list {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+    .ingredients-list li, .instructions-list li {
+        margin: 8px 0;
+        color: #e53e3e;
+    }
+
+h1 {
+    color: #e53e3e;
+}
+
+h2, h3 {
+    color: #333;
+}

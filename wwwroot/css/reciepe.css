@@ -1,0 +1,53 @@
+﻿.title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: rgb(235, 60, 60);
+    margin-top: 20px;
+}
+
+.recipe-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.recipe-button {
+    background-color: rgb(235, 60, 60);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+    .recipe-button:hover {
+        background-color: rgb(200, 50, 50);
+    }
+
+/* Grid Layout for Recipes */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.recipe-item {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+    .recipe-item:hover {
+        background: rgb(235, 60, 60);
+        color: white;
+        transform: scale(1.05);
+    }

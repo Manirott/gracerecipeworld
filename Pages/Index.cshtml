@@ -1,0 +1,92 @@
+﻿@page
+@model reciepe.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="~/css/index.css" rel="stylesheet" />
+	<script src="~/js/site.js"></script>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <nav>
+        <ul>
+            <li><a  style="text-decoration:none;" href="/Index">Home</a></li>
+            <li><a style="text-decoration:none;" href="/About">About Us</a></li>
+            <li><a style="text-decoration:none;" href="/Reciepe">Recipe</a></li>
+            <li><a style="text-decoration:none;" href="/Contact">Contact Us</a></li>
+            <li><a style="text-decoration:none;" href="/feedback">FeedBack</a></li>
+        </ul>
+    </nav><br />
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search for a recipe..." onkeyup="searchRecipe()">
+        <button onclick="searchRecipe()">🔍</button>
+    </div>
+
+    @if (!string.IsNullOrEmpty(Model.Username))
+    {
+        <p class="welcome-message">Hello, @Model.Username!</p>
+    }
+    else
+    {
+        <p class="welcome-message">Please <a href="/Login">login</a>.</p>
+    }
+
+    <div class="intro">
+        <p>Recipe World!</p>
+        <p>Indian Authentic Dishes for Modern Kitchen</p>
+    </div>
+
+    <div class="popular-recipes">
+        <p>Popular Recipes</p>
+        <div class="recipe-list">
+            <div class="recipe-item">
+                <p><a style="text-decoration:none;" href="items/Malaikofta">Malai Kofta Reciepe</a></p>
+            </div>
+            <div class="recipe-item">
+                <p><a style="text-decoration:none;" href="items/Channa">Channa Masala</a></p>
+            </div>
+            <div class="recipe-item">
+                <p><a style="text-decoration:none;" href="items/panner">Panner 65</a></p>
+            </div>
+            <div class="recipe-item">
+                <p><a style="text-decoration:none;" href="items/mixed">Mixed Rice</a></p>
+            </div>
+            <div class="recipe-item">
+                <p><a style="text-decoration:none;" href="items/Manchu">gopi Manchurian</a></p>
+            </div>
+            <div class="recipe-item">
+                <p><a style="text-decoration:none;" href="items/Makini">Dal Makhani</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="New-Reciepie">
+        <p>New reciepie</p>
+        <div class="recipe-list">
+            <div class="recipe-item">
+                <p><a style="text-decoration:none;" href="items/Malairice">Malairice</a></p>
+            </div>
+            <div class="recipe-item">
+                <p><a style="text-decoration:none;" href="items/gopirice">Gopi Rice</a></p>
+            </div>
+            <div class="recipe-item">
+                <p><a style="text-decoration:none;" href="items/safron">Safrron Rice</a></p>
+            </div>
+            <div class="recipe-item">
+                <p><a style="text-decoration:none;" href="items/corriandor">Corrindor Rice</a></p>
+            </div>
+            <div class="recipe-item">
+                <p><a style="text-decoration:none;" href="items/kerala">Kerala Special Meal</a></p>
+            </div>
+            <div class="recipe-item">
+                <p><a style="text-decoration:none;" href="items/mutton">Mutton Curry</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

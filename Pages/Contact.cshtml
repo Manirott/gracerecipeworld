@@ -1,0 +1,58 @@
+﻿@page
+@model reciepe.Pages.ContactModel
+@{
+    ViewData["Title"] = "Contact Us";
+}
+<link href="~/css/contact.css" rel="stylesheet" />
+
+<div class="contact-container">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you! Whether you have a question, feedback, or a recipe request, feel free to reach out.</p>
+
+    <!-- Display success or error messages -->
+    @if (!string.IsNullOrEmpty(Model.SuccessMessage))
+    {
+        <div class="alert alert-success">
+            @Model.SuccessMessage
+        </div>
+    }
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <div class="alert alert-danger">
+            @Model.ErrorMessage
+        </div>
+    }
+
+    <div class="contact-info">
+        <div class="info-box">
+            <h3>📍 Address</h3>
+            <p>123, Food Street,Chennai</p>
+        </div>
+        <div class="info-box">
+            <h3>📞 Phone</h3>
+            <p>+91 96771 91612</p>
+        </div>
+        <div class="info-box">
+            <h3>📧 Email</h3>
+            <p>nafiyams22@gmail.com</p>
+        </div>
+    </div>
+
+    <h2>Send Us a Message</h2>
+    <form method="post" class="contact-form">
+        <input type="text" asp-for="Name" placeholder="Your Name" required>
+        <input type="email" asp-for="Email" placeholder="Your Email" required>
+        <textarea asp-for="Message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <h2>Follow Us</h2>
+    <div class="social-links">
+        <a href="#" class="social-icon">📌 Instagram</a>
+        <a href="#" class="social-icon">📌 Facebook</a>
+        <a href="#" class="social-icon">📌 YouTube</a>
+    </div>
+</div><br />
+<div style="margin:50px">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248756.07885882704!2d80.20867324999999!3d13.04752545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1738662367855!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>

@@ -1,0 +1,90 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #e53e3e;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+    nav ul li {
+        padding: 15px 20px;
+    }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+            nav ul li a:hover {
+                color: #ffcc00;
+                ;
+            }
+
+
+
+h1 {
+    color: #e53e3e;
+    margin-top: 20px;
+}
+
+.welcome-message {
+    font-size: 18px;
+    color: #e53e3e;
+    margin: 20px;
+}
+
+.intro p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e53e3e;
+}
+
+.popular-recipes, .New-Reciepie {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 0;
+}
+
+.recipe-item p a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #e53e3e;
+    transition: 0.3s;
+}
+
+    .recipe-item p a:hover {
+        color: #ffcc00;
+    }
+
+.anchor {
+    text-decoration: none;
+    color: #e53e3e;
+    font-weight: bold;
+}
+
+    .anchor:hover {
+        color: #ffcc00;
+    }

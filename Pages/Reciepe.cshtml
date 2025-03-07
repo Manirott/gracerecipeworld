@@ -1,0 +1,64 @@
+﻿@page
+@model reciepe.Pages.ReciepeModel
+@{
+    ViewData["Title"] = "Recipes";
+}
+
+<h1 class="title">Recipes</h1>
+<link href="~/css/reciepe.css" rel="stylesheet" /><script src="~/js/site.js"></script>
+<div class="search-container">
+    <input type="text" id="search-bar" placeholder="Search for a recipe..." onkeyup="searchRecipe()">
+    <button onclick="searchRecipe()">🔍</button>
+</div>
+<!-- Recipe Filter Buttons -->
+<div class="recipe-container">
+    <button class="recipe-button" onclick="showRecipes('all')">All</button>
+    <button class="recipe-button" onclick="showRecipes('breakfast')">Breakfast</button>
+    <button class="recipe-button" onclick="showRecipes('lunch')">Lunch</button>
+    <button class="recipe-button" onclick="showRecipes('dinner')">Dinner</button>
+</div>
+
+<!-- Recipe Display Section -->
+<div id="recipe-list" class="recipe-grid">
+    <p>Select a category to view recipes.</p>
+</div>
+
+@section Scripts {
+    <script>
+        function showRecipes(category) {
+            let recipes = {
+                "breakfast": [
+                    "Idly", "Dosa", "Poori", "Uttapam", "Pongal",
+                    "mutton", "Vada", "Makini", "Upma", "Poha",
+                    "Sandwich", "Egg Bhurji", "Chole Bhature", "Rava Dosa", "Sabudana Khichdi"
+                ],
+                "lunch": [
+                    "gopirice", "kerala", "Malairice", "safron", "mutton",
+                    "Panner", "mixed", "corriandor", "Mutton Biryani", "Lemon Rice",
+                    "Pulao", "Aloo Gobi", "Tandoori Roti", "Baingan Bharta", "Palak Paneer"
+                ],
+                "dinner": [
+                    "Chapati", "Makini", "Stuffed Paratha", "Gobi Manchurian", "Veg Fried Rice",
+                    "Panner", "Tandoori Roti", "Naan with Butter Chicken", "Egg Curry", "Kadai Paneer",
+                    "mutton", "Mushroom Masala", "Jeera Rice", "Kofta Curry", "Tomato Rasam"
+                ]
+            };
+
+            let allRecipes = [...recipes.breakfast, ...recipes.lunch, ...recipes.dinner];
+
+            let selectedRecipes = category === "all" ? allRecipes : recipes[category];
+
+            let recipeList = document.getElementById("recipe-list");
+            recipeList.innerHTML = "";
+
+            selectedRecipes.forEach(recipe => {
+                recipeList.innerHTML += `
+                    <div class="recipe-item">
+                        <a style="text-decoration:none;" href="items/${encodeURIComponent(recipe)}">${recipe}</a>
+                    </div>
+                `;
+            });
+        }
+    </script>
+
+}
